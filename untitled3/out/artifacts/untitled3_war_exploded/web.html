@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>group</title>
+    <style>
+        .center{
+            position: absolute;
+            width:550px;
+            height:480px;
+            left:0;
+            top:0;
+            right:0;
+            bottom:0;
+            margin:auto;
+            border: gray solid 1px;
+            border-radius: 3px;
+            display:block;
+            filter: blur(0px);
+            background-color: white;
+        }
+        .center_display{
+            display: none;
+        }
+        .main{
+            margin:20px;
+        }
+        .head{
+            font-size: 26px;
+            font-weight: lighter;
+            font-family: "Microsoft YaHei UI";
+            align:left;
+            padding-bottom: 10px;
+            display: inline;
+        }
+        input{
+            height:28px;
+            width:401px;
+        }
+        .name{
+            margin: 5px;
+            display: inline;
+        }
+        .in{
+            margin: 10px;
+            display: inline;
+            padding: 5px;
+        }
+        .content-name{
+            margin: 9px;
+            float: left;
+        }
+        .content{
+            margin: 4px;
+            padding: 3px;
+            float: left;
+        }
+        .body{
+            margin-top: 10px;
+        }
+        textarea{
+            width: 400px;
+            height:120px;
+            border-bottom-right-radius: 2px;
+        }
+        .close{
+            text-align: right;
+            font-size: 15px;
+            padding: 1px;
+            top:30px;
+            display: inline;
+            float:right;
+            margin:5px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .create{
+            width:160px;
+            height:40px;
+            background-color: rgb(51,105,232);
+            border:1px;
+            float: right;
+            margin-top: 50px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .title{
+            display: inline;
+        }
+        select{
+            width: 70px;
+            height:25px;
+            font-size: 15px;
+        }
+        .foot{
+            margin-left: 10px;
+        }
+        .btn{
+            font-size: 14px;
+        }
+        html,body{
+            height:100%;
+            margin: 0;
+        }
+        .bg{
+            height:100%;
+            position:relative;
+
+        }
+        .bg-blur{
+            filter: blur(3px);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<div class="bg"></div>
+    <button id="btn" name="btn" class="button">小组</button>
+<div class="center center_display" name="center" id="center">
+    <div class="close"><a href="#" id="close">&#10006</a></div>
+    <div class="main" name="main">
+        <div class="head">
+            <div class="title"><p name="title">新建小组</p></div>
+        </div>
+        <br >
+        <div class="body">
+            <div class="name"></div>小组名称<div class="in"><input name="name" size="30px"></div>
+            <div class="content-name">小组简介</div><div class="content"><textarea></textarea></div>
+        </div>
+        <div class="foot">
+            <select name="selection">
+                <option name="leader">组长</option>
+                <option name="member">组员</option>
+            </select>
+        </div>
+        <div class="btn"><button class="create">创建</button></div>
+    </div>
+</div>
+<script src="assets/js/jquery.js" ></script>
+    <script>
+        $("#btn").click(function () {
+            $("#center").removeClass("center_display").siblings().addClass("bg-blur");
+        })
+        $("#close").click(function () {
+            $("#center").addClass("center_display").siblings().removeClass("bg-blur");
+        })
+</script>
+</body>
+</html>
