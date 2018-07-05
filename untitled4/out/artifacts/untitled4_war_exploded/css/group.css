@@ -1,0 +1,112 @@
+.center{
+    position: absolute;
+    width:550px;
+    height:480px;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    border: gray solid 1px;
+    border-radius: 3px;
+    display:block;
+    filter: blur(0px);
+    background-color: white;
+}
+.center_display{
+    display: none;
+}
+.main{
+    margin:20px;
+}
+.head{
+    font-size: 26px;
+    font-weight: bold;
+    display: block;
+    font-weight: lighter;
+    font-family: "Microsoft YaHei UI";
+    align:left;
+    padding-bottom: 10px;
+    display: inline;
+}
+input{
+    height:28px;
+    width:401px;
+}
+.name{
+    margin: 5px;
+    display: inline;
+}
+.in{
+    margin: 10px;
+    display: inline;
+    padding: 5px;
+}
+.content-name{
+    margin: 9px;
+    float: left;
+}
+.content{
+    margin: 4px;
+    padding: 3px;
+    float: left;
+}
+.body{
+    margin-top: 10px;
+}
+textarea{
+    width: 400px;
+    height:120px;
+    border-bottom-right-radius: 2px;
+}
+.close{
+    text-align: right;
+    font-size: 15px;
+    padding: 1px;
+    top:30px;
+    display: inline;
+    float:right;
+    margin:5px;
+}
+a{
+    text-decoration: none;
+}
+.create{
+    width:160px;
+    height:40px;
+    background-color: #d94f5c;
+    border:1px;
+    float: right;
+    margin-top: 50px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.title{
+    display: inline;
+}
+select{
+    width: 70px;
+    height:25px;
+    font-size: 15px;
+    background-color: #d94f5c;
+}
+.foot{
+    margin-left: 10px;
+}
+.btn{
+    font-size: 14px;
+}
+html,body{
+    height:100%;
+    margin: 0;
+}
+.bg{
+    height:100%;
+    position:relative;
+
+}
+.bg-blur{
+    filter: blur(3px);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

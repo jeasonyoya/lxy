@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+
+    <!--公共样式-->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/group.css" />
+    <!--主要样式-->
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+</head>
+<body>
+<div id="wrap">
+    <li class="menu__item"><a href=daohang.html>UNIDOC</a></li>
+    <div role="tabpanel" class="tab-pane" id="user">
+        <div class="check-div form-inline">
+            <div class="col-xs-3">
+            </div>
+            <div class="col-xs-4">
+                <input type="text" class="form-control input-sm" placeholder="输入文字搜索">
+                <button class="btn btn-white btn-xs ">查 询 </button>
+            </div>
+        </div>
+        <div class="data-div">
+            <div class="row tableHeader">
+                <div class="col-xs-2 ">
+                    用户ID
+                </div>
+                <div class="col-xs-2">
+                    用户名
+                </div>
+                <div class="col-xs-2">
+                    小组ID
+                </div>
+                <div class="col-xs-2">
+                    电话
+                </div>
+                <div class="col-xs-2">
+                    权限
+                </div>
+                <div class="col-xs-2">
+                    操作
+                </div>
+            </div>
+            <div class="tablebody">
+
+                <div class="row">
+                    <div class="col-xs-2 ">
+                        1
+                    </div>
+                    <div class="col-xs-2">
+                        abc
+                    </div>
+                    <div class="col-xs-2">
+                        1
+                    </div>
+                    <div class="col-xs-2">
+                        13688889999
+                    </div>
+                    <div class="col-xs-2">
+                        管理员
+                    </div>
+                    <div class="col-xs-2">
+                        <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseUser">修改</button>
+                        <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteUser">删除</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!--页码块-->
+        <footer class="footer">
+            <ul class="pagination">
+                <li>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                    页
+                </li>
+                <li class="gray">
+                    共20页
+                </li>
+                <li>
+                    <i class="glyphicon glyphicon-menu-left">
+                    </i>
+                </li>
+                <li>
+                    <i class="glyphicon glyphicon-menu-right">
+                    </i>
+                </li>
+            </ul>
+        </footer>
+        <!--弹出修改用户窗口-->
+        <div class="modal fade" id="reviseUser" role="dialog" aria-labelledby="gridSystemModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="gridSystemModalLabel">修改用户</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form class="form-horizontal">
+                                <div class="form-group ">
+                                    <label for="sName" class="col-xs-3 control-label">用户名：</label>
+                                    <div class="col-xs-8 ">
+                                        <input type="email" class="form-control input-sm duiqi" id="sName" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sLink" class="col-xs-3 control-label">真实姓名：</label>
+                                    <div class="col-xs-8 ">
+                                        <input type="" class="form-control input-sm duiqi" id="sLink" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sOrd" class="col-xs-3 control-label">电子邮箱：</label>
+                                    <div class="col-xs-8">
+                                        <input type="" class="form-control input-sm duiqi" id="sOrd" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sKnot" class="col-xs-3 control-label">电话：</label>
+                                    <div class="col-xs-8">
+                                        <input type="" class="form-control input-sm duiqi" id="sKnot" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sKnot" class="col-xs-3 control-label">地区：</label>
+                                    <div class="col-xs-8">
+                                        <input type="" class="form-control input-sm duiqi" id="sKnot" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sKnot" class="col-xs-3 control-label">权限：</label>
+                                    <div class="col-xs-8">
+                                        <select class=" form-control select-duiqi">
+                                            <option value="">管理员</option>
+                                            <option value="">普通用户</option>
+                                            <option value="">游客</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-xs btn-white" data-dismiss="modal">取 消</button>
+                        <button type="button" class="btn btn-xs btn-green">保 存</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!--弹出删除用户警告窗口-->
+        <div class="modal fade" id="deleteUser" role="dialog" aria-labelledby="gridSystemModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="gridSystemModalLabel">提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            确定要删除该用户？删除后不可恢复！
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-xs btn-white" data-dismiss="modal">取 消</button>
+                        <button type="button" class="btn  btn-xs btn-danger">保 存</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+    </div>
+</div>
+</body>
+</html>
